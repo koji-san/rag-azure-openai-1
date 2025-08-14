@@ -1,10 +1,15 @@
-import Image from "next/image";
+import FormInput from "@/components/FormInput/FormInput";
+import MessageArea from "@/components/MessageArea/MessageArea";
 
 export default function Home() {
-  // throw new Error("This is an error");
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <p>main</p>
-    </div>
+    <main className="flex flex-col text-gray-800 w-full h-full overflow-y-auto">
+      <div className="flex bg-slate-300 h-5/6 p-4 justify-center">
+        <MessageArea />
+      </div>
+      <div className="flex h-1/6 p-4 justify-center items-center">
+        <FormInput />
+      </div>
+    </main>
   );
 }
